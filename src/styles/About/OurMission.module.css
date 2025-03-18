@@ -1,0 +1,92 @@
+/* Our Mission & Values Section - Fixing responsiveness and alignment */
+.aboutSection {
+  width: 100%;
+  padding: 4rem 0;
+  text-align: center;
+  font-size: 2rem;
+  color: #ffffff;
+}
+
+.aboutContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.aboutPhoto2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px;
+  text-align: center;
+}
+
+.aboutPhoto2 img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  transition: transform 0.3s ease-in-out;
+}
+
+.aboutPhoto2 img:hover {
+  transform: scale(1.1);
+}
+
+.aboutD {
+  font-size: 18px;
+  font-weight: 600;
+  color: #a7a7a7;
+  margin-top: 15px;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Responsive Fix */
+@media (max-width: 1024px) {
+  .aboutContainer {
+    gap: 1.5rem;
+  }
+
+  .aboutPhoto2 {
+    width: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  .aboutContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .aboutPhoto2 {
+    width: 90%;
+  }
+
+  .aboutPhoto2 img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .aboutD {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .aboutPhoto2 {
+    width: 100%;
+  }
+
+  .aboutPhoto2 img {
+    width: 90px;
+    height: 90px;
+  }
+
+  .aboutD {
+    font-size: 14px;
+  }
+}

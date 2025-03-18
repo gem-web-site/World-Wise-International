@@ -1,0 +1,17 @@
+.loadingContainer {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(31, 30, 30, 0.8); /* Custom background color */
+  z-index: 1000; /* Ensure it's above other content */
+  border: none; /* Ensures no border */
+  outline: none; /* Removes any outline */
+}
+
+.loadingGif {
+  max-width: 100%;
+  height: auto;
+  max-height: 250px; /* Adjust the loading gif size */
+}

@@ -1,0 +1,214 @@
+/* Header Styles */
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 40px;
+  color: white;
+  position: fixed; /* Set position relative */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+  background-color: transparent;
+}
+
+.header.scrolled {
+  background-color: #000000; /* Background color when scrolled */
+}
+
+/* Navigation Container */
+.navContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1150px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* Left Navigation */
+.leftNav {
+  display: flex;
+  justify-content: flex-start;
+  gap: 200px; /* Large gap for the left side */
+}
+
+.leftNav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 100px;
+}
+
+.leftNav ul li {
+  margin: 0;
+}
+
+/* Right Navigation */
+.rightNav {
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px; /* Small gap for the right side */
+}
+
+.rightNav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 25px;
+}
+
+.rightNav ul li {
+  margin: 0;
+}
+
+/* Logo */
+.logo {
+  position: relative; /* Changed from absolute */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.logoImage {
+  width: 140px;
+  height: auto;
+}
+
+/* Font Import */
+@font-face {
+  font-family: "Boldwinn";
+  src: url("/Fonts/Boldwinn.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.leftNav ul li a,
+.rightNav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.3rem;
+  font-family: "Boldwinn", sans-serif;
+  transition: color 0.3s ease;
+}
+
+.leftNav ul li a:hover,
+.rightNav ul li a:hover {
+  color: #bdc003;
+}
+
+/* Mobile Menu Icon */
+.menuIcon {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Mobile Navigation */
+.mobileNav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(10px);
+  background-color: rgba(0, 0, 0, 0.85);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.3s ease-in-out,
+    visibility 0.3s ease-in-out;
+  z-index: 1000;
+}
+
+.mobileNav.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.mobileNavHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+  position: absolute;
+  top: 0;
+}
+
+.closeIcon {
+  font-size: 24px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.closeIcon:hover {
+  transform: scale(1.1);
+}
+
+.mobileNavLinks {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.mobileNavLinks li {
+  margin: 20px 0;
+}
+
+.mobileNavLinks li a {
+  color: white;
+  font-family: "Boldwinn", sans-serif;
+  text-decoration: none;
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.mobileNavLinks li a:hover {
+  color: #bdc003;
+  transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 1050px) {
+  .leftNav ul,
+  .rightNav ul {
+    gap: 10px;
+  }
+  .leftNav ul {
+    gap: 50px;
+  }
+  .leftNav ul a,
+  .rightNav ul a {
+    font-size: 0.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .leftNav,
+  .rightNav {
+    display: none;
+  }
+
+  .menuIcon {
+    display: block;
+  }
+}
+
+@media (max-width: 1000px) {
+  .leftNav ul li a,
+  .rightNav ul li a {
+    font-size: 1rem;
+  }
+}
