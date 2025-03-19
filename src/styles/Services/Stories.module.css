@@ -16,13 +16,14 @@
 
 .aboutContainer {
   max-width: 1200px;
-  margin: 0 auto;
-  margin-left: 140px;
+  margin: 0 auto; /* Center horizontally */
+  margin-left: 0; /* Remove the left margin */
   padding: 0 1rem;
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 2rem;
+  justify-content: center; /* Center content horizontally */
 }
 
 .aboutSection.abouttittle h1 {
@@ -131,6 +132,7 @@
   .aboutContainer {
     flex-direction: column;
     margin-left: 10px;
+    justify-content: center; /* Center content horizontally on small screens */
   }
 
   .aboutPhoto,
@@ -174,5 +176,6 @@
     flex-direction: row;
     align-items: center;
     gap: 2rem;
+    justify-content: center; /* Center content horizontally on larger screens */
   }
 }
